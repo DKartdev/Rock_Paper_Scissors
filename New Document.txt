@@ -1,20 +1,17 @@
 Pseidocode
 
-Function getComputerChoice.
+create function getRndInteger() where using math.random u will get function that gives random number from 1 to 3.
 
-It mush randomly return rock paper or scissors. Can use Math.random. 
+Function getComputerChoice.It  randomly returns rock paper or scissors.
+with if statements state number and wich word will show, rock paper or scissors.
 
 Test with console.log if works as intended.
-
-give each option a number from 1 to 3 and then do the random method.
-
-Make variable that is comparing that rndom number from 1 to 3 to one of rock paper scisors and then displau. like if random number eaquls 2 and scissors also is eaqul 2 then display 2.
 
 
 function getHumanChoice.
 
 make a variable what vill get value from promt. so human enters in promt value for variable tht represents humanCoice.
-
+input needs to be accepted in all cases, cant be case sensitive. but need to accept only rock, paper, scissors
 
 Players score.
 
@@ -22,7 +19,7 @@ humanScore and computerScore in global scope.
 
 Logic for rounds.
 
-if paper && rock === paper, if paper && scissors === scissors;
+if paper && rock === paper, if paper && scissors === scissors;  
 
 if rock && paper === paper, if rock && scissors === rock;
 
