@@ -1,5 +1,5 @@
 
-function roundRepetiotion(){
+function roundRepetition(){
     
     for(i = 1; i <= 5; i++){
 
@@ -197,4 +197,4 @@ console.log("Number of round:" + " " + round++)
 
 
 
-roundRepetiotion()
+roundRepetition()
