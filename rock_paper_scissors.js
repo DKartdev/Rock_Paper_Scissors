@@ -1,5 +1,5 @@
 
-function roundRepetiotion(humanChoice, computerChoice){
+function roundRepetiotion(){
     
     for(i = 1; i <= 5; i++){
 
@@ -80,11 +80,12 @@ function playRound(humanChoice, computerChoice){
  
  if (humanChoice === paper && computerChoice === rock){
     winner = human;
+    console.log(winner + " " + "wins!")
 
      }
  else if(humanChoice === paper && computerChoice === scissors ){
    winner = computer
-    
+    console.log(winner + " " + "wins!")
  }
   else if(humanChoice === paper && computerChoice === paper ){
     console.log("it`s a Tie!")
@@ -95,22 +96,22 @@ function playRound(humanChoice, computerChoice){
  }
  else if(humanChoice === rock && computerChoice === scissors ){
    winner = human
-  
+  console.log(winner + " " + "wins!")
  }
  else if(humanChoice === rock && computerChoice === paper ){
     winner = computer
-   
+   console.log(winner + " " + "wins!")
  }
  else if(humanChoice === scissors && computerChoice === scissors ){
     console.log("It`s a Tie!")
  }
  else if(humanChoice === scissors && computerChoice === rock ){
    winner = computer
-   
+   console.log(winner + " " + "wins!")
    }
  else if(humanChoice === scissors && computerChoice === paper ){
     winner = human
-     
+     console.log(winner + " " + "wins!")
  }
  
  else{console.log("Error! Please try again!")}
@@ -179,12 +180,15 @@ let countComputerScoref = countComputerScore()
 console.log("Computer score:" + " " + countComputerScoref)
 
 
+let round = 0
+console.log("Number of round:" + " " + round++)
+//create round count so each round have dispayed that exmp. its round one.
+
 }
 }
 
   /// theScore + humanScore++ 
 
-//playGame() play the game 
 
 
 

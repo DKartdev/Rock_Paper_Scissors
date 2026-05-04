@@ -35,3 +35,15 @@ levels/rounds
 
 5 repetitions of game. for loop possibly. in 5th round in the end say who wins.
 
+
+
+if case 1 (rock, paper)
+
+console.log(Paper wins!)
+
+scoore count
+
+k'a izdar'it t'a lai vi'n's saprot ka katru reizi kad ir jauns rauds punkti j'askaita kl'at nevis no 0 
+
+
+every raund need to be counted together not starting from 0 every time 
