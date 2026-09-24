@@ -1,20 +1,43 @@
 
-function roundRepetition(){
+// function roundRepetition(){
     
-    for(i = 1; i <= 5; i++){
+//     for(i = 1; i <= 5; i++){
+ const paperButton = document.querySelector("#paper")
+ const rockButton = document.querySelector("#rock")
+ const scissorsButton = document.querySelector("#scissors")
+ const buttonContainer = document.querySelector("#button-container")
 
 function getHumanChoice(){
 
-  let input = prompt("Please enter your choice!");//gets human input rock, paper or scissors
-  let stringToLower = input.toLowerCase()
-  let strLenght = input.length;
-  let firstLetter = stringToLower.slice(0, 1);
-  let firstLetterUper = firstLetter.toUpperCase();
-  let restOfTheWord = stringToLower.slice(1, strLenght);
-  let humanInput = firstLetterUper + restOfTheWord;
-  return humanInput
+  // let input = prompt("Please enter your choice!");//gets human input rock, paper or scissors
+  // let stringToLower = input.toLowerCase()
+  // let strLenght = input.length;
+  // let firstLetter = stringToLower.slice(0, 1);
+  // let firstLetterUper = firstLetter.toUpperCase();
+  // let restOfTheWord = stringToLower.slice(1, strLenght);
+  // let humanInput = firstLetterUper + restOfTheWord;
+  // return humanInput
 
 //here add listeners whn clicket to take it as human choice 
+
+
+//let menu = document.querySelector('#menu');
+
+buttonContainer.addEventListener('click', (event) => {
+    const target = event.target;
+
+    switch(target.id) {
+        case 'scissors':
+            return scissors;
+            break;
+        case 'rock':
+            return rock;;
+            break;
+        case 'paper':
+            return paper;;
+            break;
+    }
+});
 
 
 }
@@ -26,9 +49,7 @@ let humanChoice = getHumanChoice();
  const rock = "Rock";
  const scissors = "Scissors";
 
- const paperButton = document.querySelector("#paper")
- const rockButton = document.querySelector("#rock")
- const scissorsButton = document.querySelector("#scissors")
+
 
 
 function getRndInteger() {
@@ -192,8 +213,8 @@ let round = 0
 console.log("Number of round:" + " " + round++)
 //create round count so each round have dispayed that exmp. its round one.
 
-}
-}
+// }
+// }
 
   /// theScore + humanScore++ 
 
