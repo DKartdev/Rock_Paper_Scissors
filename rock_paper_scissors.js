@@ -13,6 +13,10 @@ function getHumanChoice(){
   let restOfTheWord = stringToLower.slice(1, strLenght);
   let humanInput = firstLetterUper + restOfTheWord;
   return humanInput
+
+//here add listeners whn clicket to take it as human choice 
+
+
 }
 
 let humanChoice = getHumanChoice();
@@ -21,6 +25,10 @@ let humanChoice = getHumanChoice();
  const paper = "Paper";
  const rock = "Rock";
  const scissors = "Scissors";
+
+ const paperButton = document.querySelector("#paper")
+ const rockButton = document.querySelector("#rock")
+ const scissorsButton = document.querySelector("#scissors")
 
 
 function getRndInteger() {
