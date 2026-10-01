@@ -4,37 +4,25 @@
 //     for(i = 1; i <= 5; i++){
 
 const paperButton = document.querySelector("#paper")
- const rockButton = document.querySelector("#rock")
- const scissorsButton = document.querySelector("#scissors")
- const humanChoiceClick = document.querySelector("#human-choice-click")
- const buttonContainer = document.querySelector("#button-container")
- const buttons = document.querySelectorAll("button")
+const rockButton = document.querySelector("#rock")
+const scissorsButton = document.querySelector("#scissors")
+const humanChoiceClick = document.querySelector("#human-choice-click")
+const buttonContainer = document.querySelector("#button-container")
+const buttons = document.querySelectorAll("button")
 
 
 const paper = "Paper";
- const rock = "Rock";
- const scissors = "Scissors";
+const rock = "Rock";
+const scissors = "Scissors";
 
- //humanChoiceClick.addEventListener('click', getHumanChoice)
+
  
- buttonContainer.addEventListener('click', (event) => {
-
+buttonContainer.addEventListener('click', (event) => {
 getHumanChoice()
-startGame()
+playGame()
+})
 
 
-
- }
- 
- )
-
-
-//i need it to start game when clicked on button and also to take choice
-
-//nee to seperate clicking on buttum and putting in humanchoice 
-//like putting when pressed on rock button do this 
-
- 
 function getHumanChoice(){
   let humanChoice
 let target = event.target;
@@ -56,19 +44,9 @@ return humanChoice
 }
 
 
-function startGame(){
+function playGame(){
 
-
-
-
- let humanChoice =  getHumanChoice()
-
-
-
-
-
-
-
+let humanChoice =  getHumanChoice()
  
 function getRndInteger() {
   return Math.floor(Math.random() * (4 - 1) + 1);// returns integer from 1 to 3 both including. 
@@ -102,16 +80,10 @@ const computer = "computer"
 let humanScore = 0; 
 let computerScore = 0;
 
-// let theScore =  playGame()//gets the score for winner. this probably isnt working right becasue it returns 1 but doesnt say to hum, its like score eaquls both humanScore and computerScore
-// console.log(theScore )
-
-
 
 
 let selectionInRound = "Human choice:" + " " + humanChoice  +  " " + "||| " + " " + "Computer choice:" + " " + computerChoice ;
 console.log(selectionInRound)
-
-
 
    
 function playRound(humanChoice, computerChoice){
@@ -119,42 +91,25 @@ function playRound(humanChoice, computerChoice){
  
   let winner; 
  
- if (humanChoice === paper && computerChoice === rock){
+ if (humanChoice === paper && computerChoice === rock
+   || humanChoice === rock && computerChoice === scissors 
+   || humanChoice === scissors && computerChoice === paper){
     winner = human;
     console.log(winner + " " + "wins!")
 
      }
- else if(humanChoice === paper && computerChoice === scissors ){
+ else if(humanChoice === paper && computerChoice === scissors ||
+         humanChoice === rock && computerChoice === paper || 
+         humanChoice === scissors && computerChoice === rock){
    winner = computer
     console.log(winner + " " + "wins!")
  }
-  else if(humanChoice === paper && computerChoice === paper ){
+  else if(humanChoice === paper && computerChoice === paper 
+         || humanChoice === rock && computerChoice === rock 
+         || humanChoice === scissors && computerChoice === scissors ){
     console.log("it`s a Tie!")
 
  }
-  else if(humanChoice === rock && computerChoice === rock ){
-    console.log("it`s a Tie!")
- }
- else if(humanChoice === rock && computerChoice === scissors ){
-   winner = human
-  console.log(winner + " " + "wins!")
- }
- else if(humanChoice === rock && computerChoice === paper ){
-    winner = computer
-   console.log(winner + " " + "wins!")
- }
- else if(humanChoice === scissors && computerChoice === scissors ){
-    console.log("It`s a Tie!")
- }
- else if(humanChoice === scissors && computerChoice === rock ){
-   winner = computer
-   console.log(winner + " " + "wins!")
-   }
- else if(humanChoice === scissors && computerChoice === paper ){
-    winner = human
-     console.log(winner + " " + "wins!")
- }
- 
  else{console.log("Error! Please try again!")}
  
   return winner;
@@ -239,14 +194,3 @@ let winner = roundWinner()
 
 //roundRepetition()
 
-
-//function getHumanChoice(){
-
-  // let input = prompt("Please enter your choice!");//gets human input rock, paper or scissors
-  // let stringToLower = input.toLowerCase()
-  // let strLenght = input.length;
-  // let firstLetter = stringToLower.slice(0, 1);
-  // let firstLetterUper = firstLetter.toUpperCase();
-  // let restOfTheWord = stringToLower.slice(1, strLenght);
-  // let humanInput = firstLetterUper + restOfTheWord;
-  // return humanInput
