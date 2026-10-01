@@ -2,56 +2,74 @@
 // function roundRepetition(){
     
 //     for(i = 1; i <= 5; i++){
- const paperButton = document.querySelector("#paper")
+
+const paperButton = document.querySelector("#paper")
  const rockButton = document.querySelector("#rock")
  const scissorsButton = document.querySelector("#scissors")
+ const humanChoiceClick = document.querySelector("#human-choice-click")
  const buttonContainer = document.querySelector("#button-container")
-
-function getHumanChoice(){
-
-  // let input = prompt("Please enter your choice!");//gets human input rock, paper or scissors
-  // let stringToLower = input.toLowerCase()
-  // let strLenght = input.length;
-  // let firstLetter = stringToLower.slice(0, 1);
-  // let firstLetterUper = firstLetter.toUpperCase();
-  // let restOfTheWord = stringToLower.slice(1, strLenght);
-  // let humanInput = firstLetterUper + restOfTheWord;
-  // return humanInput
-
-//here add listeners whn clicket to take it as human choice 
+ const buttons = document.querySelectorAll("button")
 
 
-//let menu = document.querySelector('#menu');
-
-buttonContainer.addEventListener('click', (event) => {
-    const target = event.target;
-
-    switch(target.id) {
-        case 'scissors':
-            return scissors;
-            break;
-        case 'rock':
-            return rock;;
-            break;
-        case 'paper':
-            return paper;;
-            break;
-    }
-});
-
-
-}
-
-let humanChoice = getHumanChoice();
-
-
- const paper = "Paper";
+const paper = "Paper";
  const rock = "Rock";
  const scissors = "Scissors";
 
+ //humanChoiceClick.addEventListener('click', getHumanChoice)
+ 
+ buttonContainer.addEventListener('click', (event) => {
+
+getHumanChoice()
+startGame()
 
 
 
+ }
+ 
+ )
+
+
+//i need it to start game when clicked on button and also to take choice
+
+//nee to seperate clicking on buttum and putting in humanchoice 
+//like putting when pressed on rock button do this 
+
+ 
+function getHumanChoice(){
+  let humanChoice
+let target = event.target;
+      
+    switch(target.id) {
+        case 'scissors':
+         humanChoice = scissors ;
+            break;
+        case 'rock':
+            humanChoice =  rock;
+            break;
+        case 'paper':
+            humanChoice =  paper;
+            break;
+
+    
+    }
+return humanChoice
+}
+
+
+function startGame(){
+
+
+
+
+ let humanChoice =  getHumanChoice()
+
+
+
+
+
+
+
+ 
 function getRndInteger() {
   return Math.floor(Math.random() * (4 - 1) + 1);// returns integer from 1 to 3 both including. 
 }
@@ -94,12 +112,6 @@ let selectionInRound = "Human choice:" + " " + humanChoice  +  " " + "||| " + " 
 console.log(selectionInRound)
 
 
-//// This far works well as intended
-
-
-
-
-    ////start of the game 
 
    
 function playRound(humanChoice, computerChoice){
@@ -149,8 +161,8 @@ function playRound(humanChoice, computerChoice){
         
 }
 
-    
-  
+
+
 
 
 
@@ -166,51 +178,50 @@ return winnerOfRound
 
 
 
-   
- 
+  
 
 
 
 let winner = roundWinner()
-
-
-
-
-function countHumaScore(){
-
-let addHumanScore;
-if (winner === human){
-    addHumanScore = humanScore++;
-    addHumanScore++
 }
-else {addHumanScore = humanScore} 
-return addHumanScore
 
-}
+
+
+// function countHumaScore(){
+
+// let addHumanScore;
+// if (winner === human){
+//     addHumanScore = humanScore++;
+//     addHumanScore++
+// }
+// else {addHumanScore = humanScore} 
+// return addHumanScore
+
+// }
   
-let countHumaScoref = countHumaScore()
-console.log("Human score:" + " " + countHumaScoref)
+// let countHumaScoref = countHumaScore()
+// console.log("Human score:" + " " + countHumaScoref)
 
 
 
-function countComputerScore(){
-let addComputerScore
-if (winner === computer){
-    addComputerScore = computerScore++;
-  addComputerScore++
+// function countComputerScore(){
+// let addComputerScore
+// if (winner === computer){
+//     addComputerScore = computerScore++;
+//   addComputerScore++
 
 
-}
-else {addComputerScore = computerScore} 
-return addComputerScore
-}
+// }
+// else {addComputerScore = computerScore} 
+// return addComputerScore
+// }
 
-let countComputerScoref = countComputerScore()
-console.log("Computer score:" + " " + countComputerScoref)
+// let countComputerScoref = countComputerScore()
+// console.log("Computer score:" + " " + countComputerScoref)
 
 
-let round = 0
-console.log("Number of round:" + " " + round++)
+// let round = 0
+// console.log("Number of round:" + " " + round++)
 //create round count so each round have dispayed that exmp. its round one.
 
 // }
@@ -226,4 +237,16 @@ console.log("Number of round:" + " " + round++)
 
 
 
-roundRepetition()
+//roundRepetition()
+
+
+//function getHumanChoice(){
+
+  // let input = prompt("Please enter your choice!");//gets human input rock, paper or scissors
+  // let stringToLower = input.toLowerCase()
+  // let strLenght = input.length;
+  // let firstLetter = stringToLower.slice(0, 1);
+  // let firstLetterUper = firstLetter.toUpperCase();
+  // let restOfTheWord = stringToLower.slice(1, strLenght);
+  // let humanInput = firstLetterUper + restOfTheWord;
+  // return humanInput
