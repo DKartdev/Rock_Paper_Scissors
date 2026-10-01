@@ -9,6 +9,8 @@ const scissorsButton = document.querySelector("#scissors")
 const humanChoiceClick = document.querySelector("#human-choice-click")
 const buttonContainer = document.querySelector("#button-container")
 const buttons = document.querySelectorAll("button")
+const resultContainer = document.querySelector("#result-container")
+const result = document.querySelector("#result")
 
 
 const paper = "Paper";
@@ -74,8 +76,8 @@ function getComputerChoice(){//gives random rock, paper or scissors, based on ra
 let computerChoice = getComputerChoice();
 
 
-const human = "human"
-const computer = "computer"
+const human = "Human"
+const computer = "Computer"
 
 let humanScore = 0; 
 let computerScore = 0;
@@ -83,8 +85,10 @@ let computerScore = 0;
 
 
 let selectionInRound = "Human choice:" + " " + humanChoice  +  " " + "||| " + " " + "Computer choice:" + " " + computerChoice ;
-console.log(selectionInRound)
-
+//console.log(selectionInRound)
+resultContainer.textContent = selectionInRound
+resultContainer.setAttribute("style", "font-size: 40px")
+result.setAttribute("style", "font-size: 40px")
    
 function playRound(humanChoice, computerChoice){
  //  plays a single round, increments the round winner’s score and logs a winner announcement.
@@ -95,19 +99,21 @@ function playRound(humanChoice, computerChoice){
    || humanChoice === rock && computerChoice === scissors 
    || humanChoice === scissors && computerChoice === paper){
     winner = human;
-    console.log(winner + " " + "wins!")
+    result.textContent = winner + " " + "wins!"
+    
 
      }
  else if(humanChoice === paper && computerChoice === scissors ||
          humanChoice === rock && computerChoice === paper || 
          humanChoice === scissors && computerChoice === rock){
    winner = computer
-    console.log(winner + " " + "wins!")
+     result.textContent = winner + " " + "wins!"
  }
   else if(humanChoice === paper && computerChoice === paper 
          || humanChoice === rock && computerChoice === rock 
          || humanChoice === scissors && computerChoice === scissors ){
-    console.log("it`s a Tie!")
+    
+     result.textContent = "it`s a Tie!"
 
  }
  else{console.log("Error! Please try again!")}
