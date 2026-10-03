@@ -1,7 +1,18 @@
+function round(){
+countOfRounds.addEventListener('click', (event) => {
+let winnerScore = winner++
 
-// function roundRepetition(){
-    
-//     for(i = 1; i <= 5; i++){
+
+if (winner == computer){
+return winnerScore = computerScore++
+
+}
+else if(winner == human)
+
+return winnerScore = humanScore++
+})
+
+}
 
 const paperButton = document.querySelector("#paper")
 const rockButton = document.querySelector("#rock")
@@ -11,6 +22,7 @@ const buttonContainer = document.querySelector("#button-container")
 const buttons = document.querySelectorAll("button")
 const resultContainer = document.querySelector("#result-container")
 const result = document.querySelector("#result")
+const countOfRounds = document.querySelector("#count-of-rounds")
 
 
 const paper = "Paper";
@@ -22,12 +34,13 @@ const scissors = "Scissors";
 buttonContainer.addEventListener('click', (event) => {
 getHumanChoice()
 playGame()
+round()
 })
 
 
 function getHumanChoice(){
   let humanChoice
-let target = event.target;
+  let target = event.target;
       
     switch(target.id) {
         case 'scissors':
@@ -85,35 +98,31 @@ let computerScore = 0;
 
 
 let selectionInRound = "Human choice:" + " " + humanChoice  +  " " + "||| " + " " + "Computer choice:" + " " + computerChoice ;
-//console.log(selectionInRound)
+
 resultContainer.textContent = selectionInRound
 resultContainer.setAttribute("style", "font-size: 40px")
 result.setAttribute("style", "font-size: 40px")
    
 function playRound(humanChoice, computerChoice){
- //  plays a single round, increments the round winner’s score and logs a winner announcement.
- 
   let winner; 
  
- if (humanChoice === paper && computerChoice === rock
-   || humanChoice === rock && computerChoice === scissors 
-   || humanChoice === scissors && computerChoice === paper){
-    winner = human;
-    result.textContent = winner + " " + "wins!"
-    
-
-     }
+    if (humanChoice === paper && computerChoice === rock ||
+        humanChoice === rock && computerChoice === scissors ||
+        humanChoice === scissors && computerChoice === paper){
+        winner = human;
+        result.textContent = winner + " " + "wins!"
+    }
  else if(humanChoice === paper && computerChoice === scissors ||
          humanChoice === rock && computerChoice === paper || 
          humanChoice === scissors && computerChoice === rock){
-   winner = computer
-     result.textContent = winner + " " + "wins!"
+         winner = computer
+         result.textContent = winner + " " + "wins!"
  }
-  else if(humanChoice === paper && computerChoice === paper 
-         || humanChoice === rock && computerChoice === rock 
-         || humanChoice === scissors && computerChoice === scissors ){
+  else if(humanChoice === paper && computerChoice === paper ||
+          humanChoice === rock && computerChoice === rock ||
+          humanChoice === scissors && computerChoice === scissors ){
     
-     result.textContent = "it`s a Tie!"
+          result.textContent = "it`s a Tie!"
 
  }
  else{console.log("Error! Please try again!")}
@@ -121,9 +130,6 @@ function playRound(humanChoice, computerChoice){
   return winner;
         
 }
-
-
-
 
 
 
@@ -137,66 +143,17 @@ return winnerOfRound
 
 
 
-
-
-  
-
-
-
 let winner = roundWinner()
+
+
+
 }
 
 
 
-// function countHumaScore(){
-
-// let addHumanScore;
-// if (winner === human){
-//     addHumanScore = humanScore++;
-//     addHumanScore++
-// }
-// else {addHumanScore = humanScore} 
-// return addHumanScore
-
-// }
-  
-// let countHumaScoref = countHumaScore()
-// console.log("Human score:" + " " + countHumaScoref)
+// counts points at each round,
+//  when one of the players gets 5 points game starts again. 
+//when click add ++ to winner 
 
 
-
-// function countComputerScore(){
-// let addComputerScore
-// if (winner === computer){
-//     addComputerScore = computerScore++;
-//   addComputerScore++
-
-
-// }
-// else {addComputerScore = computerScore} 
-// return addComputerScore
-// }
-
-// let countComputerScoref = countComputerScore()
-// console.log("Computer score:" + " " + countComputerScoref)
-
-
-// let round = 0
-// console.log("Number of round:" + " " + round++)
-//create round count so each round have dispayed that exmp. its round one.
-
-// }
-// }
-
-  /// theScore + humanScore++ 
-
-
-
-
-
-
-
-
-
-//roundRepetition()
 
