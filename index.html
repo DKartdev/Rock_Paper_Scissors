@@ -1,38 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="rps.css" />
     <script src="rock_paper_scissors.js" defer></script>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <h1 id="human-choice-click">Please click on your choice!</h1>
-    
-    <div id="button-container"> 
-    <button type="button" >
-        <img id="scissors" src="img/pexels-octavian-6655146.jpg" alt="scissors" width="200" height="200">
-    </button>
-     <button type="button" >
-        <img id="rock" src="img/pexels-raymond-petrik-1448389535-28458034.jpg" alt="rock" width="200" height="200">
-    </button>
- <button type="button" >
-        <img id="paper" src="img/pexels-tara-winstead-8386683.jpg" alt="paper" width="200" height="200">
-    </button>
+
+    <div id="button-container">
+      <h2>Scissors </h2>
+        <button type="button">
+          <img
+            id="scissors"
+            src="img/pexels-octavian-6655146.jpg"
+            alt="scissors"
+            width="200"
+            height="200"
+          />
+        </button>
+     
+
+      <h2>Rock</h2>
+        <button type="button">
+          <img
+            id="rock"
+            src="img/pexels-raymond-petrik-1448389535-28458034.jpg"
+            alt="rock"
+            width="200"
+            height="200"
+          />
+        </button>
+      
+      <h2>Paper </h2>
+        <button type="button">
+          <img
+            id="paper"
+            src="img/pexels-eva-bronzini-8072474.jpg"
+            alt="paper"
+            width="200"
+            height="200"
+          />
+        </button>
+     
     </div>
 
-    <div id="result-container">
-        
-
-
-    </div>
+    <div id="result-container"></div>
     <div id="result"></div>
     <div id="count-of-rounds"></div>
     <div id="human-score"></div>
     <div id="computer-score"></div>
-
-
-</body>
+  </body>
 </html>

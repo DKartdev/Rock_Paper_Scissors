@@ -128,7 +128,9 @@ function playGame() {
     }
 
     computerScoreCount.textContent = "Computer score :" + computerScore;
+    computerScoreCount.setAttribute("style", "font-size: 40px");
     humanScoreCount.textContent = "Human score :" + humanScore;
+    humanScoreCount.setAttribute("style", "font-size: 40px");
     return winner;
   }
 
