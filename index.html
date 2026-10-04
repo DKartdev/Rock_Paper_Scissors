@@ -8,10 +8,14 @@
     <script src="rock_paper_scissors.js" defer></script>
   </head>
   <body>
-    <h1 id="human-choice-click">Please click on your choice!</h1>
 
+    <div class="start-container"> 
+    <h1 id="human-choice-click">Please click on your choice!</h1>
+    </div>
     <div id="button-container">
-      <h2>Scissors </h2>
+    
+<div class="button-choice-container">
+      <h2 >Scissors </h2>
         <button type="button">
           <img
             id="scissors"
@@ -21,8 +25,9 @@
             height="200"
           />
         </button>
-     
+     </div>
 
+     <div class="button-choice-container">
       <h2>Rock</h2>
         <button type="button">
           <img
@@ -33,7 +38,10 @@
             height="200"
           />
         </button>
-      
+      </div>
+
+      <div class="button-choice-container">
+
       <h2>Paper </h2>
         <button type="button">
           <img
@@ -44,13 +52,33 @@
             height="200"
           />
         </button>
-     
+     </div>
     </div>
 
+
+<div class="result-output-container">  
+
+  <div class="output-container">
     <div id="result-container"></div>
+</div>
+
+    <div class="output-container">
     <div id="result"></div>
+</div>
+<div class="output-container">
     <div id="count-of-rounds"></div>
+</div>
+<div class="output-container">
     <div id="human-score"></div>
+</div>
+
+    <div class="output-container">
     <div id="computer-score"></div>
+</div>
+
+</div>
+
+
+
   </body>
 </html>

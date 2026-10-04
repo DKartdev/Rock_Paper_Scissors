@@ -28,7 +28,6 @@ buttonContainer.addEventListener("click", (event) => {
   getHumanChoice();
   playGame();
   numberOfRound();
-
   repetition();
 });
 
@@ -58,11 +57,11 @@ function playGame() {
   let humanChoice = getHumanChoice();
 
   function getRndInteger() {
-    return Math.floor(Math.random() * (4 - 1) + 1); // returns integer from 1 to 3 both including.
+    return Math.floor(Math.random() * (4 - 1) + 1); 
   }
 
   function getComputerChoice() {
-    //gives random rock, paper or scissors, based on random number from fuction getRndInteger.
+    
     let choice;
     if (getRndInteger() <= 1) {
       choice = rock;
@@ -114,7 +113,6 @@ function playGame() {
       (humanChoice === scissors && computerChoice === rock)
     ) {
       winner = computer;
-
       computerScore++;
       result.textContent = winner + " " + "wins!";
     } else if (
@@ -137,7 +135,7 @@ function playGame() {
   function roundWinner() {
     let winnerOfRound = playRound(humanChoice, computerChoice);
     return winnerOfRound;
-  } //returns who won the round
+  } 
 
   let winner = roundWinner();
 }
